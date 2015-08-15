@@ -290,6 +290,7 @@ def get_core_behaviors(input_file=None):
 
 
 def get_expanded_behavior_list(sim_metric="path",synset_names=False):
+    from brainbehavior.nlp import do_stem
     families = get_families(sim_metric=sim_metric,synset_names=synset_names)
     family_index = get_family_index(families)
     allstems = []
