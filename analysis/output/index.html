@@ -3,12 +3,12 @@
 <html>
   <head>
     <title>Reddit Behavioral Co-Occurrence</title>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
     <script src="tipsy.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
     <style>
  
       body {
@@ -73,7 +73,7 @@
 
     <a href="?data=panic"><button class="btn btn-default" type="button">Panic</button></a>
    <a href="?data=worldnews"><button class="btn btn-default" type="button">World News</button></a>
-    <a href="http://www.reddit.com" target="_blank" class="reddit-button"><button class="btn btn-success" type="button">REDDIT</button></a>
+    <a href="https://www.reddit.com" target="_blank" class="reddit-button"><button class="btn btn-success" type="button">REDDIT</button></a>
                    
     </div>
 
@@ -99,11 +99,11 @@
      //Get json name from the browser url
      var tsv_data = getUrlVars()
 
-     if (typeof tsv_data["data"] == 'undefined'){ tsv_data = "Alzheimers";}
+     if (typeof tsv_data["data"] == 'undefined'){ tsv_data = "panic";}
      else { tsv_data = tsv_data["data"].replace("/",""); }
 
      document.getElementsByClassName("reddit")[0].textContent = "Reddit Behavioral Co-Occurrence: " + tsv_data
-     document.getElementsByClassName("reddit-button")[0].href = "http://www.reddit.com/r/" + tsv_data
+     document.getElementsByClassName("reddit-button")[0].href = "https://www.reddit.com/r/" + tsv_data
 
      var margin = { top: 20, right: 0, bottom: 20, left: 100 },
           width = 1600 - margin.left - margin.right,
