@@ -6,3 +6,7 @@ test:
   override:
     - python config.py
     - nosetests --where=analysis --with-doctest --verbosity=3 --nocapture
+
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install r-base
