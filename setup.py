@@ -15,7 +15,7 @@ setup(
     packages=find_packages(),
 
     # Data
-    package_data = {'brainbehavior':['data/*','data.cognitiveatlas/*']},
+    package_data = {'brainbehavior.data':['cognitiveatlas/*']},
 
     # Details
     url="http://www.github.com/vsoch/brainbehavior",
