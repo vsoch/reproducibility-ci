@@ -245,15 +245,15 @@ def get_behavior_synset(behavior,nid=1):
                 relations = relations + new_relations
     return synsets
 
-def read_cogpheno(input_file=None):
-    if input_file == None:
-        input_file = get_input_file()
-    return pandas.read_csv(input_file,sep="\t")
-
 
 def get_input_file():
     diry = os.path.dirname(os.path.realpath(__file__))
     return "%s/brainbehavior/data/cognitiveatlas/cogPheno_791.tsv" %diry
+
+def read_cogpheno(input_file=None):
+    if input_file == None:
+        input_file = get_input_file()
+    return pandas.read_csv(input_file,sep="\t")
 
 
 # QUALITY CONTROL -----------------------------------------------------------------------------------------------------
@@ -277,7 +277,7 @@ def check_cogpheno_terms(input_file=None):
 # Core are just the terms defined in cogatpheno
 def get_core_behaviors(input_file=None):
     if input_file == None:
-        input_file = get_input_file
+        input_file = get_input_file()
     cogpheno = read_cogpheno(input_file)
     # Reduce down to synsets
     traits = cogpheno.question_behavioral_trait_synset.dropna().unique()
