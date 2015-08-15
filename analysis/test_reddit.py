@@ -71,6 +71,6 @@ class RedditTest(TestCase):
                 else:
                     df.loc[:,term1] = 0
 
-            df.to_csv("output/%s_co-occurrence.tsv", tmp["disorder"],sep="\t")
+            df.to_csv("output/%s_co-occurrence.tsv" %tmp["disorder"],sep="\t")
             print "Finished."
             pass
