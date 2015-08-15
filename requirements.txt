@@ -1,0 +1,7 @@
+nltk
+selenium
+wikipedia
+textblob
+PRAW
+numpy
+pandas

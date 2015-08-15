@@ -1,0 +1,8 @@
+general:
+  artifacts:
+    - "analysis/output"
+
+test:
+  override:
+    - python config.py
+    - nosetests --where=analysis --with-doctest --verbosity=3 --nocapture
