@@ -248,7 +248,7 @@ def get_behavior_synset(behavior,nid=1):
 
 def get_input_file():
     diry = os.path.dirname(os.path.realpath(__file__))
-    return "%s/brainbehavior/data/cognitiveatlas/cogPheno_791.tsv" %diry
+    return "%s/data/cognitiveatlas/cogPheno_791.tsv" %diry
 
 def read_cogpheno(input_file=None):
     if input_file == None:
@@ -380,7 +380,7 @@ def get_expanded_family_dict(sim_metric="path",synset_names=False,unique=True):
 def behaviors_to_pickle(output_file=None,behavior_set="expanded"):
     if output_file == None:
         diry = os.path.dirname(os.path.abspath(__file__))
-        output_file = "%s/brainbehavior/data/cognitiveatlas/behavioraltraits.pkl" %diry
+        output_file = "%s/data/cognitiveatlas/behavioraltraits.pkl" %diry
     if behavior_set == "expanded":
         behaviors = get_expanded_behavior_list()
     else:
@@ -388,5 +388,8 @@ def behaviors_to_pickle(output_file=None,behavior_set="expanded"):
     pickle.dump(behaviors,open(output_file,"wb"))
 
 # Expanded include synonyms, similartos
-def load_behaviors(input_pickle="brainbehavior/data/cognitiveatlas/behavioraltraits.pkl"):
+def load_behaviors(input_pickle=None):
+    if input_pickle == None:
+        diry = os.path.dirname(os.path.abspath(__file__))
+        input_pickle = "%s/data/cognitiveatlas/behavioraltraits.pkl" %diry
     return pickle.load(open(input_pickle,"rb"))
