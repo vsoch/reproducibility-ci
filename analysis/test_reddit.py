@@ -57,9 +57,9 @@ class RedditTest(TestCase):
             # Result df will be terms by terms
             df = pandas.DataFrame(columns=terms,index=terms)
 
+            print "Calculating co-occurrence for %s" %tmp["disorder"]
             for t in range(0,len(terms)):
                 term1 = terms[t]
-                print "Calculating co-occurrence for %s" %(term1)
                 subset = familydf.loc[familydf[term1]>0]
                 number_with_term1 = subset.shape[0]
                 if number_with_term1 != 0:
