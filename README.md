@@ -1,5 +1,7 @@
 ## Reproducibility with CI
 
+[![Circle CI](https://circleci.com/gh/vsoch/reproducibility-ci/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/reproducibility-ci/tree/master)
+
 ### Instructions for Reproducing Analysis
 
 1. Fork repo
