@@ -1,6 +1,7 @@
-require(reshape)
-require(plyr)
-require(pheatmap)
+install.packages("reshape")
+install.packages("plyr")
+library(reshape)
+library(plyr)
 
 indir = "output"
 input_datas = list.files(indir,pattern="*.tsv")
