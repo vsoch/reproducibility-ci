@@ -72,7 +72,7 @@ class RedditTest(TestCase):
                     df.loc[:,term1] = 0
 
             df.to_csv("output/%s_co-occurrence.tsv" %tmp["disorder"],sep="\t")
-            print "Finished."
-            pass
-            os.system("Rscript prep_cooccurr_data.R")
+        print "Finished."
+        pass
+        os.system("Rscript prep_cooccurr_data.R")
     
